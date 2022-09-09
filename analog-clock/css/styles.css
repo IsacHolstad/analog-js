@@ -1,3 +1,50 @@
 body{
-    background-color: yellow;
+    background-color: darkgray;
+    margin: 0;
+    font-size: 2rem;
+    display: flex;
+    flex: 1;
+    min-height: 100vh;
+    align-itmes: center;
+}
+
+.clock{
+    width: 30rem;
+    height: 30rem;
+    border: 7px solid green;
+    border-radius: 50%;
+    margin: 50px auto;
+    position: relative;
+    padding: 2rem;
+
+}
+
+.outer-clock-face{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    background: #09131d;
+    overflow: hidden;
+}
+
+.outer-clock-face::after {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+.outer-clock-face::before,
+.outer-clock-face::after,
+.outer-clock-face .marking {
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 100%;
+    background: deepskyblue;
+    z-index: 0;
+    left: 49%;
+}
+.outer-clock-face .marking {
+    background: #bdbdcb;
+    width: 3px;
 }
